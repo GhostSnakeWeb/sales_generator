@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="outer">
+    <div class="button">Кликни</div>
+</div>
+
+<div class="modal-fade">
+    <div class="modal-window">
+        <div class="modal-window-left">
+            <h1 class="title">Получите набор файлов<br> для руководителя:</h1>
+            <div class="icon-container">
+                <span class="icon icon1"></span>
+                <span class="icon icon2"></span>
+                <span class="icon icon3"></span>
+                <span class="icon icon4"></span>
+                <span class="icon icon5"></span>
+                <span class="icon icon6"></span>
+                <span class="icon icon7"></span>
+            </div>
+            <div class="img-container">
+                <img src="img/phone.png" alt="Файлы" class="phone-img">
+            </div>
+        </div>
+        <div class="modal-window-right">
+            <button class="modal-close"></button>
+            <form action="php/send.php" method="post" class="form-get-files">
+
+                <!-- Необходимые скрытые поля -->
+                <input type="hidden" name="project_name" value="Тестовый сайт">
+                <input type="hidden" name="form_from" value="admin@site.com">
+                <input type="hidden" name="admin_email" value="vladan9820@mail.ru">
+                <input type="hidden" name="form_subject" value="Сообщение с тестового сайта">
+                <!-- //Необходимые скрытые поля -->
+
+                <label for="email" id="label_email" class="form-get-files__label">Введите Email для получения файлов:</label>
+                <input type="email" id="email" placeholder="E-mail" name="email" class="form-get-files__input">
+
+                <label for="phone" id="label_phone" class="form-get-files__label">Введите телефон для подтверждения доступа:</label>
+                <input type="text" id="phone" placeholder="+7 (000) 000-00-00" name="phone" class="form-get-files__input check">
+
+                <input type="submit" class="form-get-files-btn" value="Скачать файлы">
+                <div class="info">
+                    <span>PDF 4,7 MB</span>
+                    <span>DOC 0,8 MB</span>
+                    <span>XLS 1,2 MB</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<span class="success">Спасибо! Мы приняли Вашу заявку.</span>
+
+<script src="js/main.js"></script>
+<script src="js/phone-validator.js"></script>
+<script src="js/form-validator.js"></script>
+</body>
+</html>
